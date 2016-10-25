@@ -26,7 +26,7 @@ var utilities = {
       displayIndex += 3;
       return displayIndex;
     };
-    
+
     $(function () {
       btn.on('click', function (e) {
         e.preventDefault();
@@ -57,7 +57,7 @@ $(function () {
   var createElementFunction = function (data) {
     return '<li style="color:red">' + data["login"] + '</li>';
   }
-  
+
   utilities.loadMore(btn, list, link, createElementFunction);
 
 });

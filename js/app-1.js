@@ -41,7 +41,7 @@
 
 const myStack = ['test-1', 'test-2', 'test-3'];
 const l = myStack.length;
-//myStack[l] = "test-4";  
+//myStack[l] = "test-4";
 // adding to last
 myStack.push('test-4');
 //adding to first
@@ -55,13 +55,13 @@ myStack.shift();
 const i = myStack.indexOf('test-2');
 myStack.splice(i, 1);
 
-// Template curly bracket spacing IMPORTANT: they are not inverted commas they are back ticks 
+// Template curly bracket spacing IMPORTANT: they are not inverted commas they are back ticks
 function sayHi(name) {
   console.info(`Hello, how are ,${name}?`);
 };
 sayHi("Leo");
 
-//Immdiately invoked functions 
+//Immdiately invoked functions
 // immediately-invoked function expression (IIFE)
 (function () {
   console.log('Welcome to the Internet. Please follow me.');

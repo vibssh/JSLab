@@ -43,36 +43,36 @@
   console.log(noiseArray);
   animal.noises.push(noiseArray);
   console.log(animal);
-  
+
   /* Animal Collection */
   console.log('##### Animal Collection #####');
   var animals = [];
   animals.push(animal);
   console.log(animals);
-  
+
   var quackers = {
-    username: 'DaffyDuck', tagline: 'Yippeee!', noises: ['quack', 'honk', 'sneeze', 'growl'] 
-  };  
+    username: 'DaffyDuck', tagline: 'Yippeee!', noises: ['quack', 'honk', 'sneeze', 'growl']
+  };
   console.log(quackers);
-  
+
   animals.push(quackers);
   //animals.concat(quackers);
   console.log(animals);
-  
+
   var mockers = {
     username : 'mockingDuck',
     tagline : 'mockDuck',
     noises: ['mockQuack']
   };
-  
+
   var shockers = {
     username : 'shockingDuck',
     tagline : 'shockingDuck',
     noises : ['shockDuck']
   };
-  
+
   animals.push(mockers);
   animals.push(shockers);
   console.log(animals.length);
-  
+
 }());
