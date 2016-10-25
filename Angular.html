@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Angular Sortable</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
-  .grabbable {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-}</style>
+    .grabbable {
+      cursor: move;
+      /* fallback if grab cursor is unsupported */
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+    }
+  </style>
 </head>
+
 <body data-ng-app="myApp">
- <div class="container" data-ng-controller="MainController">
-   <h3>{{heading}}</h3>
+  <div class="container" data-ng-controller="MainController">
+    <h3>{{heading}}</h3>
 
-   <!-- Item list from the api -->
-   <ul sv-root sv-part="tasks">
-     <li data-ng-repeat="task in tasks track by $index" sv-element class="grabbable">
-      {{task.task}}
-     </li>
-   </ul>
+    <!-- Item list from the api -->
+    <ul sv-root sv-part="tasks">
+      <li data-ng-repeat="task in tasks track by $index" sv-element class="grabbable">
+        {{task.task}}
+      </li>
+    </ul>
 
- </div>
+    <hr>
+   <!-- Post Data Below -->
+      <form class="form-inline">
+      <div class="form-group">
+        <label for="taskName">Task Name</label>
+        <input type="text" class="form-control" id="taskName" placeholder="Enter a Task here" data-ng-model="new">
+      </div>
+
+      <button class="btn btn-default" data-ng-click="postTask()">Post a Task</button>
+    </form>
+
+  </div>
 
   <script src="/scripts/angular.min.js"></script>
   <script src="/scripts/angular-sortable-view.min.js"></script>
   <script src="/js/myApp.js"></script>
 </body>
+
 </html>
