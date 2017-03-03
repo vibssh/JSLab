@@ -5,110 +5,53 @@
   <meta charset="UTF-8">
   <title>You Don't need jquery</title>
   <style>
-    .tab-link.active {
-      color: green;
-    }
 
-    #tab-content div {
-      display: none;
-    }
-
-    #tab-content div.tab-selected {
-      display: block;
-    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div id="wrapper">
+    <div id="wrapper-container">
+      <div id="wrapper-content">
+        <div id="tab-nav">
+          <ul>
+            <li><a href="#" class="tab-link" data-tab="one">Tab One</a></li>
+            <li><a href="#" class="tab-link" data-tab="two">Tab Two</a></li>
+            <li><a href="#" class="tab-link" data-tab="three">Tab Three</a></li>
+          </ul>
+        </div>
 
-  <div id="tab-nav">
-    <ul>
-      <li><a href="#" class="tab-link" data-tab="one">Tab One</a></li>
-      <li><a href="#" class="tab-link" data-tab="two">Tab Two</a></li>
-      <li><a href="#" class="tab-link" data-tab="three">Tab Three</a></li>
-    </ul>
+        <div id="tab-content">
+          <div data-tab="one">
+            <p>This is Tab one Content</p>
+          </div>
+          <div data-tab="two">
+            <p>This is Tab two Content</p>
+          </div>
+          <div data-tab="three">
+            <p>This is Tab three Content</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright <span id="year"></span>. All rights unreserved.</p>
+      </footer>
+    </div>
   </div>
-
-  <div id="tab-content">
-    <div data-tab="one">
-      <p>This is Tab one Content</p>
-    </div>
-    <div data-tab="two">
-      <p>This is Tab two Content</p>
-    </div>
-    <div data-tab="three">
-      <p>This is Tab three Content</p>
-    </div>
-  </div>
-
-
 </body>
 
+<!-- Setting the copyright year -->
 <script type="text/javascript">
-  (function () {
-    'use strict';
-    var s,
-      AccordianWidget = {
-        settings: {
-          $tabNav: document.getElementById('tab-nav'),
-          $tabLinks: document.getElementsByClassName('tab-link')
-          //$tabContent: document.getElementById('tab-content')
-        },
-
-        init: function (tabContent) {
-          s = this.settings;
-          s.$tabContent = document.querySelector(tabContent);
-          this.bindUIActions();
-          var firstTabLink = s.$tabLinks[0];
-          firstTabLink.classList.add('active');
-
-          var firstTabContent = s.$tabContent.children[0];
-          firstTabContent.classList.add('tab-selected');
-        },
-
-        bindUIActions: function () {
-          for(var i=0; i < s.$tabLinks.length; i++){
-            s.$tabLinks[i].addEventListener('click', function(){
-              AccordianWidget.accordianMethod(this, s.$tabContent);
-            })
-          }
-
-        },
-
-        accordianMethod: function ($clicked) {
-         var dataId =$clicked.getAttribute('data-tab');
-         var tabContents = s.$tabContent.children;
-
-         //Remove Active Class from each of the Tab link triggers
-         for(var i=0; i<s.$tabLinks.length; i++){
-           s.$tabLinks[i].classList.remove('active');
-         }
-
-        // Adding Active Class to the clicked Link
-         $clicked.classList.add('active');
-
-         //Remove Selected Class from each of the Tab Content
-         for(var i=0; i<tabContents.length; i++){
-           tabContents[i].classList.remove('tab-selected');
-         };
-
-         //Adding Selected Class to the corresponding Tab Content
-          var showContent = s.$tabContent.querySelector('div[data-tab="' + dataId + '"]');
-          showContent.classList.add('tab-selected');
-
-        }
-      };
-
-
-    //Pass in the Parent Element Selector of all the Tab content
-    AccordianWidget.init('#tab-content');
-
-
-
-
-
-
-  }());
+ var el = document.getElementById('year');
+ var dt = new Date();
+ var yr = dt.getFullYear();
+  el.innerHTML = yr;
 </script>
+
+<!-- Tabs -->
+<script src="js/tabs.js"></script>
 
 </html>

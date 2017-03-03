@@ -1,0 +1,49 @@
+html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tab-link.active {
+      color: green;
+    }
+
+    #tab-content div {
+      display: none;
+    }
+
+    #tab-content div.tab-selected {
+      display: block;
+    }
+
+    #wrapper {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+
+    #wrapper-container {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: url('/img/sample-img.jpg') no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    #wrapper-content{
+      padding-bottom: 2em;
+    }
+
+    footer {
+      position : absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+
+    ul {
+      margin: 0;
+    }
+
