@@ -22,7 +22,7 @@
         bindUIActions: function () {
           for (var i = 0; i < s.$tabLinks.length; i++) {
             s.$tabLinks[i].addEventListener('click', function () {
-              AccordianWidget.accordianMethod(this, s.$tabContent);
+              AccordianWidget.accordianMethod(this);
             })
           }
 

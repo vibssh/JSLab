@@ -1,26 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "JSLab", "http://localhost:54981", "{6BEF3D06-D669-480D-B278-4C4CE0772220}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "JSLab", ".", "{D31FC864-DE48-46C1-838E-BF1B79CFFF71}"
 	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_54981"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55008"
 		Debug.AspNetCompiler.PhysicalPath = "..\JSLab\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54981\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55008\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_54981"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55008"
 		Release.AspNetCompiler.PhysicalPath = "..\JSLab\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54981\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55008\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55008"
 		SlnRelativePath = "..\JSLab\"
 	EndProjectSection
 EndProject
@@ -29,8 +29,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BEF3D06-D669-480D-B278-4C4CE0772220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BEF3D06-D669-480D-B278-4C4CE0772220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31FC864-DE48-46C1-838E-BF1B79CFFF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31FC864-DE48-46C1-838E-BF1B79CFFF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
