@@ -1,0 +1,40 @@
+<! Doctype HTML>
+<html lang="en">
+<head>
+<title>Test</title>
+</head>
+<body>
+<h1>Revealing Module Pattern </h1>
+
+<script>
+var MyModule =(function(window, undefined){
+
+ var myMethod = function(){
+	alert('My Method');
+ }
+ 
+ var youMethod = function(){
+	alert('Your Method');
+ }
+ 
+ var _PrivateObject = {
+ 
+	_pvtMethod : function(){
+		alert('Private Method');
+	}
+ };
+ 
+ //Expose Public API
+ 
+ return {
+	selfMethod : myMethod,
+	otherMethod: youMethod,
+	pvtMethod: _PrivateObject._pvtMethod
+ };
+
+}(window));
+
+MyModule.pvtMethod();
+</script>
+</body>
+</html>
