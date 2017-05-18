@@ -2,11 +2,69 @@
 <html lang="en">
 <head>
 <title>Test</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
 <h1>Revealing Module Pattern </h1>
 
+<!-- using Module 1 -->
+<div data-component="MySample" data-sample="test">
+    <h1>Hello from my sample</h1>
+</div>
+
+<!-- using Module 2 -->
+<div data-component="MySampleTwo" data-sample="test">
+    <h1>Hello from my sample two</h1>
+</div>
+
+
+
 <script>
+
+// Component Loader
+var Components = {};
+
+    (function(){
+    'use strict';
+    $(document).on('ready page:load', function(){
+       var componentName = null;
+        $('[data-component]').each(function(index, element){
+           componentName = $(element).data('component');
+            //Checking if Components has got own Property
+            if (Components.hasOwnProperty(componentName)){
+                new Components[componentName](element);
+            }
+        });
+    });
+}());
+
+
+// Module 1
+(function(){
+    var MySample = function(element){
+       var $el =   $(element);
+       var x = $el.data('sample');
+        console.info(x);
+    };
+
+    Components.MySample = MySample;
+
+}());
+
+//Module 2
+(function(){
+    var MySampleTwo = function(element){
+       var $el =   $(element);
+       var x = $el.data('sample');
+        console.info($($el).html());
+    };
+    Components.MySampleTwo = MySampleTwo;
+
+}());
+
+
+// Revealing Pattern Module
+
 var MyModule =(function(window, undefined){
 
  var myMethod = function(){
@@ -25,8 +83,7 @@ var MyModule =(function(window, undefined){
  };
  
  //Expose Public API
- 
- return {
+  return {
 	selfMethod : myMethod,
 	otherMethod: youMethod,
 	pvtMethod: _PrivateObject._pvtMethod
@@ -34,6 +91,7 @@ var MyModule =(function(window, undefined){
 
 }(window));
 
+// Initiate the Method
 MyModule.pvtMethod();
 </script>
 </body>
