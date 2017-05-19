@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JS</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            margin: 10px;
+        }
+        
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+<script lang="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+
+
+<body>
+    <!--Lazy Sample-->
+    <div class="container">
+        <div id="data-wrapper">
+            <ul>
+
+            </ul>
+
+            <button class="btn primary-btn">Load More</button>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script>
+        
+
+
+
+            $(document).ready(function () {
+                $(window).scroll(lazyload);
+                getData();
+                
+            });
+
+            
+
+            function getData() {
+                $.ajax({
+                    url: 'http://localhost:3000/results',
+                    type: 'GET',
+                    success: function (data) {
+                        console.info(data);
+                        var i = 0;
+                        var len = data.length;
+
+                        for (i; i < len; i++) {
+                            $('#data-wrapper ul').append('<li>' + '<img src= "' + data[i].image.icon_url + '" />' + data[i].name + '</li>');
+                            //lazyload();
+                        }
+                    },
+                    error: function () {
+
+                    }
+                });
+
+            };
+
+
+
+
+       
+    </script>
+</body>
+
+</html>
