@@ -21,22 +21,37 @@
 
 <script>
 
-// Component Loader
+// Component Loader - Javascript
 var Components = {};
 
     (function(){
     'use strict';
-    $(document).on('ready page:load', function(){
+    document.addEventListener('DOMContentLoaded', function(){
        var componentName = null;
-        $('[data-component]').each(function(index, element){
-           componentName = $(element).data('component');
-            //Checking if Components has got own Property
-            if (Components.hasOwnProperty(componentName)){
-                new Components[componentName](element);
+       var dataEl = document.querySelectorAll('[data-component]');
+        for(var i=0; i<dataEl.length; i++) {
+            var el = dataEl[i].getAttribute('data-component');
+            componentName = el;
+            if(Components.hasOwnProperty(componentName)){
+                Components[componentName](dataEl[i]);
             }
-        });
+        }
     });
 }());
+
+
+// Component Loader - jQuery
+//    $(document).on('ready page:load', function(){
+//       var componentName = null;
+//        $('[data-component]').each(function(index, element){
+//           componentName = $(element).data('component');
+//            //Checking if Components has got own Property
+//            if (Components.hasOwnProperty(componentName)){
+//                Components[componentName](element);
+//            }
+//        });
+//    });
+//}());
 
 
 // Module 1
