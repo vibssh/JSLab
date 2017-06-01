@@ -88,6 +88,7 @@ var MyModule =(function(window, undefined){
  
  var youMethod = function(){
 	alert('Your Method');
+     alert(_PrivateObject._pvtMethod());
  }
  
  var _PrivateObject = {
@@ -100,14 +101,13 @@ var MyModule =(function(window, undefined){
  //Expose Public API
   return {
 	selfMethod : myMethod,
-	otherMethod: youMethod,
-	pvtMethod: _PrivateObject._pvtMethod
+	otherMethod: youMethod
  };
 
 }(window));
 
 // Initiate the Method
-MyModule.pvtMethod();
+MyModule.otherMethod();
 </script>
 </body>
 </html>
