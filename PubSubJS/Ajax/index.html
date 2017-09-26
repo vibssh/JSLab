@@ -27,9 +27,15 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="list-group" id="user-list">
+        <!-- Get the List dynamically via Ajax -->
+      </div>
+    </div>
   </div>
   <!-- End of Get User List UI !-->
-  </div>
+
   <!-- End of UI -->
 
   <!-- JS Reference -->
@@ -39,10 +45,11 @@
 
 
   <!-- Application Modules -->
-
+  <script src='AjaxModule.js'></script>
 
   <!-- Expose JSPublic API -->
   <script type='text/javascript'>
+    _AjaxModule.init();
   </script>
 </body>
 
