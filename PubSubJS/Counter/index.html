@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		.row {
+			margin-bottom: 1em;
+		}
+
+		.remove-btn {
+			color: red;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.added {
+			color: #039803;
+		}
+
+		.removed {
+			text-decoration: line-through;
+			color: #ff00ff;
+		}
+	</style>
+	<title>PubSubJS</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- People Counter UI  -->
+		<div class="row">
+			<div class="well">
+				<h4>People Joined : <span id="joined-count"></span></h2>
+			</div>
+		</div>
+
+		<!-- Add person UI -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Person Name" id="input-person">
+					<span class="input-group-btn">
+<button class="btn btn-default" id="add-person" type="button">Add Person</button>
+</span>
+				</div>
+				<!-- /input-group -->
+			</div>
+		</div>
+
+		<!-- List People UI -->
+		<div class="row">
+			<div class="col-md-12">
+				<!--List of People added -->
+				<ul class="list-group" id="people-list"></ul>
+			</div>
+		</div>
+	</div>
+	<!-- End of UI -->
+
+	<!-- JS Reference -->
+
+	<!-- External Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="pubsub.js"></script>
+
+	<!-- Application Modules -->
+	<script src="peopleManagement.js"></script>
+	<script src="statsManagement.js"></script>
+	<script src="eventManagement.js"></script>
+
+	<!-- Expose JSblic API -->
+	<script type="text/javascript">
+		_PeopleManagement.bindUIActions();
+		_StatsManagement.init();
+		_EventManagement.init();
+	</script>
+</body>
+
+</html>

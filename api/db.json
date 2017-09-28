@@ -1,0 +1,20 @@
+{
+  "ToDo": [
+    {
+      "id": 0,
+      "task": "Get up early"
+    },
+    {
+      "id": 1,
+      "task": "Drink Water"
+    },
+    {
+      "id": 2,
+      "task": "Get Ready"
+    },
+    {
+      "task": "Pray to the Lord",
+      "id": 3
+    }
+  ]
+}
