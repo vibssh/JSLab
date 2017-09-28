@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
+  <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
+  <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
+  <link rel='manifest' href='/manifest.json'>
+  <meta name='theme-color' content='#ffffff'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <style>
+    .row {
+      margin-bottom: 1em;
+    }
+  </style>
+  <title>GitHub Users List - Ajax pubSub Example</title>
+</head>
+
+<body>
+  <div class='container'>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h4>Get the list of users below </h4>
+          <button id="listUsers" class="btn btn-success">List users</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="list-group" id="list">
+         <!-- Get list of user on Click of button -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End of UI -->
+
+  <!-- JS Reference -->
+
+  <!-- External Libraries -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/pubsub-js/1.5.7/pubsub.js'></script>
+
+  <!-- Application Modules -->
+  <script src='js/eventManagement.js'></script>
+  <script src='js/ajaxModule.js'></script>
+  <script src='js/uiInteractionModule.js'></script>
+
+  <!-- Expose JSPublic API -->
+  <script type='text/javascript'>
+    _AjaxModule.init();
+    _EventManagement.init();
+  </script>
+</body>
+
+</html>
