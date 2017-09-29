@@ -8,16 +8,24 @@
 var _EventManagement = (function(window){
 'use strict';
   var _PrivateSettings = {
-    Topics : []
+    Topics : ['fetchDataSuccess', 'fetchDataFailure'],
+    login : ''
  
   }
  
   var init = function(){
- 
+    PubSub.subscribe(_PrivateSettings.Topics[0], function(msg, data){
+      _UIManagement.createList(msg, data);
+      
+    });
+
+    PubSub.subscribe(_PrivateSettings.Topics[1], function(msg, data){
+      console.info(data);
+    })
   }
  
   return {
-    
+    evtSettings: _PrivateSettings,
     init: init
   }
 }(window));

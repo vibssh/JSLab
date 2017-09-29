@@ -22,8 +22,7 @@
           <h3 class="panel-title">Retreive list of users on Github</h3>
         </div>
         <div class="panel-body">
-          <button class="btn btn-success" id="get-users">Get User List
-             </button>
+          <button class="btn btn-success" id="getUsers">Get User List</button>
         </div>
       </div>
     </div>
@@ -46,10 +45,13 @@
 
   <!-- Application Modules -->
   <script src='AjaxModule.js'></script>
-  
+  <script src='EventManagement.js'></script>
+  <script src='UIManagement.js'></script>
+
   <!-- Expose JSPublic API -->
   <script type='text/javascript'>
     _AjaxModule.init();
+    _EventManagement.init();
   </script>
 </body>
 
