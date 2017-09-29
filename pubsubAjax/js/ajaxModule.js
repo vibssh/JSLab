@@ -8,7 +8,7 @@
 var _AjaxModule = (function(window){
 'use strict';
   var _PrivateSettings = {
-    $endPoint : 'https://api.github.com/uers',
+    $endPoint : 'https://api.github.com/users',
     $method  : 'GET',
     $statusCode : ''
   };

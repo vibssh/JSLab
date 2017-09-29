@@ -9,17 +9,25 @@ var _UIModule = (function (window) {
   'use strict';
   var _PrivateSettings = {
     $list: $('#list'),
-    $listItem: ''
+    //$listItem: '',
+    $tpl : $('#loginTpl')
   }
 
   //Success Data UI 
   var createList = function (msg, data) {
+    console.info('data', data);
     //Align the data in whatever ways you want in the UI 
-    $.each(data, function (i){
-      var li = '<div class="list-group-item">' + data[i].login + '</div>';
-      _PrivateSettings.$listItem += li;
-    });
-    _PrivateSettings.$list.html(_PrivateSettings.$listItem);
+    // $.each(data, function (i){
+    //   var li = '<div class="list-group-item">' + data[i].login + '</div>';
+    //   _PrivateSettings.$listItem += li;
+    // });
+    // _PrivateSettings.$list.html(_PrivateSettings.$listItem);
+    
+    //Mustache Version
+    var loginName = {loginName : data};
+    var template = _PrivateSettings.$tpl.html();
+    var html = Mustache.to_html(template, loginName);
+    _PrivateSettings.$list.html(html);
   }
 
   

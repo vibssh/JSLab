@@ -33,19 +33,27 @@
     <div class="row">
       <div class="col-md-12">
         <div class="list-group" id="list">
-         <!-- Get list of user on Click of button -->
+         
+            <script id="loginTpl" type="text/template">
+             
+                  {{#loginName}} 
+                  <div class="list-group-item">
+                    {{login}}
+                  </div>
+                   {{/loginName}}
+            </script>
         </div>
       </div>
     </div>
-
   </div>
   <!-- End of UI -->
 
   <!-- JS Reference -->
-
+  
   <!-- External Libraries -->
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/pubsub-js/1.5.7/pubsub.js'></script>
+  <script src='js/mustache.js'></script>
 
   <!-- Application Modules -->
   <script src='js/eventManagement.js'></script>
