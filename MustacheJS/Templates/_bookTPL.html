@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Books Template</title>
+</head>
+<body>  
+  <!-- Mustache Template Engine used to get this template -->
+  <script id="booksTPL" type="text/html">
+    <!-- <div class="list-item-group">
+      {{#Books}}
+      <h2>{{Title}}</h2>
+      <em>{{Subject}}</em>
+      {{#Author}}{{.}}{{/Author}}
+      {{/Books}}
+    </div>   -->
+
+    <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Book Title</th>
+            <th>Book Subject</th>
+            <th>Book Author</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#Books}}
+          <tr>
+            <td>{{Title}}</td>
+            <td>{{Subject}}</td>
+            <td>{{#Author}} {{.}} {{/Author}}</td>
+          </tr>
+          {{/Books}}
+        </tbody>
+      </table>
+
+
+
+
+  </script>
+  
+</body>
+</html>

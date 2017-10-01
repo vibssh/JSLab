@@ -1,0 +1,18 @@
+{
+  "Books": [{
+      "Title": "Modular Verification of Interrupt-Driven Software",
+      "Author": ["Chungha Sung", "Markus Kusano", "Chao Wang"],
+      "Subject": "Programming Language"
+    },
+    {
+      "Title": "Thread-Modular Static Analysis for Relaxed Memory Models",
+      "Author": ["Markus Kusano", "Chao Wang"],
+      "Subject": "Programming Language"
+    },
+    {
+      "Title": "An Empirical Study on the Impact of Refactoring Activities on Evolving Client-Used APIs",
+      "Author": ["Raula Gaikovina Kula", "Ali Ouni", "Daniel M. German", "Katsuro Inoue"],
+      "Subject": "Software Engineering"
+    }
+  ]
+}
