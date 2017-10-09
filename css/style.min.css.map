@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AAAA,yDAAyD",
+    "sources": [
+        "../patternlab/source/css/style.scss",
+        "../patternlab/source/css/scss/_index.scss",
+        "../patternlab/source/css/scss/base/_index.scss",
+        "../patternlab/source/css/scss/abstracts/_index.scss",
+        "../patternlab/source/css/scss/components/_index.scss",
+        "../patternlab/source/css/scss/layout/_index.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
