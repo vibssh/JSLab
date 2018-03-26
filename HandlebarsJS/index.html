@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
+<link rel='manifest' href='/manifest.json'>
+<meta name='theme-color' content='#ffffff'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='css/app.css'>
+<title>Cerdelga - Handlebars Flavoured</title>
+</head>
+  <body>
+    <div id="header">
+       
+    </div>
+
+    <div id="footer">
+
+    </div>
+  <!-- End of UI -->
+
+  <!-- JS Reference -->
+
+  <!-- External Libraries -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.runtime.js'></script>  
+  <script src='js/lib/third-party/pubsub.js'></script>
+
+  <!-- Application Modules -->
+  <script src='js/templates/templ.js'></script>    
+  
+  <!-- <script src='js/modules/_EventManagement.js'></script>
+  <script src='js/modules/_AjaxFetchData.js'></script>
+  <script src='js/modules/_UIManagement.js'></script> -->
+  
+  
+
+  <!-- Expose JSPublic API -->
+  <script type='text/javascript'>
+    // var $url = 'headerTPL.html';
+     //_AjaxFetchData.init($url);
+    // _EventManagement.init();
+
+    var headerData = {
+      "title": "Hello World !"
+    };
+
+    var result = Handlebars.templates.header(headerData);
+$(document.body).append(result);
+    // var header = Handlebars.templates.header;
+    // var footer = Handlebars.templates['footer'];
+    // $('#header').html(header);
+    // $('#footer').html(footer);
+    // header(data)
+    
+    
+  </script>
+  </body>
+</html>
