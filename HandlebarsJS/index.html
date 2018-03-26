@@ -46,10 +46,17 @@
     // var $url = 'headerTPL.html';
      //_AjaxFetchData.init($url);
     // _EventManagement.init();
-    var header = Handlebars.templates['header'];
-    var footer = Handlebars.templates['footer'];
-    $('#header').html(header);
-    $('#footer').html(footer);
+
+    var headerData = {
+      "title": "Hello World !"
+    };
+
+    var result = Handlebars.templates.header(headerData);
+$(document.body).append(result);
+    // var header = Handlebars.templates.header;
+    // var footer = Handlebars.templates['footer'];
+    // $('#header').html(header);
+    // $('#footer').html(footer);
     // header(data)
     
     
