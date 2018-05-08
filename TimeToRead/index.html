@@ -73,20 +73,20 @@
   
   <script type="text/javascript">
 
- /* Function to count Words  */
+  /* Function to count Words Removing spaces  */
   function countWords(str) {
     return str.trim().split(/\s+/).length;
   }
  
- var words = document.getElementById("read").innerHTML;
- var normalWordReadSpeed = 300;   
+  var words = document.getElementById("read").innerHTML;
+  var normalWordReadSpeed = 300;   
 
   var totalWords = countWords(words);
-  
+  var timeToRead = totalWords / normalWordReadSpeed;
+  var timeInt = Math.round(timeToRead);
+  document.getElementById("readTime").innerHTML = timeInt;
 
-   var timeToRead = totalWords / normalWordReadSpeed;
-   var timeInt = Math.round(timeToRead);
-   document.getElementById("readTime").innerHTML = timeInt;
  </script>
+
 </body>
 </html>
