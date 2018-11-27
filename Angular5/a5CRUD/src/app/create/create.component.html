@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <form>
+      <label for="title">Title</label>
+      <input type="text" name="title"  [(ngModel)]="title">
+      <label for="post">Post</label>
+      <input type="text" name="post"  [(ngModel)]="post">
+      <button (click)="addPosts(title, post)">Add Post</button>
+    </form>
+  </div>
+</div>
+<button (click)="getUsers();" class="btn btn-success">Get Users</button>
+<!-- Get Request of Items -->
+<h1>Users</h1>
+<div *ngFor="let user of users">
+  {{user.title}}
+</div>
+
+<button (click)="getUsersAndComment();" class="btn btn-info">Comments</button>
+<h2>Comments and TOdos </h2>
+
+
+<div *ngIf="posts">
+    <h3>New Added Post</h3>
+    <div  *ngFor="let post of posts">
+        {{post.title}} - {{post.post}}
+      </div>
+</div>

@@ -1,0 +1,28 @@
+<form #employeeForm= "ngForm" >
+  <div class="form-group">
+    <label for="firstName">First name</label>
+    <input type="text" class="form-control" #fName  name="firstName" [(ngModel)]="firstName" required>
+    {{firstName}}
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last name</label>
+    <input type="text" class="form-control" #lName name="lastName" [(ngModel)]="lastName" required>
+  </div>
+
+  <div class="form-group">
+    <label for="empCode">EmpCode</label>
+    <input type="text" class="form-control" #eCode [(ngModel)]="empCode" name="empCode" required>
+  </div>
+
+  <div class="form-group">
+    <label for="position">Position</label>
+    <input type="text" class="form-control" #pos [(ngModel)]="position" name="position" required>
+  </div>
+
+  <div class="form-group">
+    <label for="office">Office</label>
+    <input type="text" class="form-control" #off [(ngModel)]="office" name="office" required>
+  </div>
+  <button class="btn btn-success" (click)="addEmployee(employeeForm.value)">Add Employee</button>
+</form>

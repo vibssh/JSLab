@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Auto Complete Search Functionality</title>
+  
+
+</head>
+
+<body>
+  <input type="text" id="search">
+  <div id="result"></div>
+
+
+  <script>
+      (function(){
+        'use strict';
+        var fruits = ["Mango", "Apple","Orange", "Banana", "Grapes", "Pomogranets", "Kiwi"];
+        var result = document.getElementById('result');
+        var input = document.getElementById('search');
+
+
+        var matchFruits = function(input){
+          var reg = new RegExp(input.split('').join('\\w*').replace(/\W/, ""), 'i');
+          return fruits.filter(function(fruit){
+              if(fruit.match(reg)){
+                return fruit;
+              }
+          });
+        };
+    
+        
+        var changeInput = function(el){
+          var autoComplete = matchFruits(el);
+          result.innerHTML = autoComplete;
+        };
+
+        input.addEventListener('keyup', function(){
+          var val = input.value;
+
+          if (input.value.replace(/^\s+|\s+$/g, "").length != 0){ // checking for blank or empty input space
+            changeInput(val);
+          } else {
+            result.innerHTML = '';
+          }
+          
+        });
+    
+      }());
+      </script>
+  
+</body>
+</html>
